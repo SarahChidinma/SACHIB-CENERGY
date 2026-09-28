@@ -1,0 +1,18 @@
+# System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / Web dependencies (for future phases)
+node_modules/
+dist/
+build/
+.env
+.env.local
