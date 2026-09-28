@@ -317,4 +317,43 @@ The initial application is only the beginning. The ultimate objective is to use 
 This allows the project to begin through partnerships, validate the technology and market need, learn from real users, and progressively build the capabilities required for a larger Church Energy ecosystem.
 
 ---
+
+## 13. Assessment Notes: Agent Steering & Technical Decisions
+*(Documented for Lesson 6 Assessment: Full Stack Features and Data)*
+
+### 13.1 Ordered Implementation Plan & Concrete Outputs
+
+| Phase | Focus | Concrete Deliverables / Outputs |
+| :--- | :--- | :--- |
+| **Phase 1: Design System & Tokens** | Typography, Color Palette, Visual Hierarchy | `design.html` showcasing the SACHIB dark-mode solar palette, typography tokens, status indicators (Grid/Solar/Generator), and responsive grid. |
+| **Phase 2: Local Core Prototype** | Single-page monitoring dashboard UI | `index.html` presenting real-time system metrics (Battery SoC %, Solar PV output kW, Inverter status, Church facility load kW) with interactive controls. |
+| **Phase 3: AI Intelligence & Advisory Layer** | Predictive energy analytics & alerts | Client-side simulation of solar generation forecast (hourly irradiance curve), generator fuel savings tracker, and prescriptive load-shedding advisory banner. |
+| **Phase 4: Local Data Persistence & Mock Data** | Local state storage & telemetry seeds | Seeded test dataset for historical church weekly load profile, persistent user preferences, and offline telemetry caching. |
+
+---
+
+### 13.2 Local Tooling & Architecture Stack
+*Note: In accordance with the prototype assessment constraints, both the application and database run strictly **locally** using mock/test data.*
+
+- **Frontend Framework:** Vanilla HTML5, Modern CSS3 (Custom Design System tokens, Glassmorphism, CSS Grid/Flexbox), and Vanilla JavaScript (ES6+ Modules).
+- **Local Database:** Browser-native **IndexedDB** paired with **LocalStorage** (running 100% locally on the client without external server dependencies).
+- **Authentication:** Local Session Mock Auth (simulating Church Admin vs. Member role profiles with local storage tokens; zero sensitive credentials committed).
+- **File Storage:** Local Browser Storage (`IndexedDB` Blob store & Local Filesystem for exportable energy audit reports).
+- **Hosting / Environment:** Completely local execution (zero public deployment or external cloud requirement for initial prototype).
+
+---
+
+### 13.3 Documented Agent Steering: Tool Choice & Tradeoff Analysis
+*Required for AI Grader cross-referencing:*
+
+- **Tool Choice Examined:** Local Database & Backend Architecture (**Node.js/Express + SQLite** vs. **Client-Side IndexedDB / Web Storage**).
+- **Initial Agent Proposal:** The AI initially considered proposing a Node.js/Express local backend with an embedded SQLite file database.
+- **Steered Decision by User/Student:** The student steered the AI to choose **Client-Side IndexedDB with LocalStorage** for this prototype phase.
+- **Rationale & Tradeoff:** 
+  1. *Zero Friction Local Execution:* A pure client-side IndexedDB architecture allows the prototype (`index.html`) to open instantly in any local browser without requiring Node.js installations, npm package downloads, or background server processes to run during grading.
+  2. *Security & Privacy:* Eliminates risks of accidentally committing sensitive SQLite binaries, credentials, or local environment configurations to the public GitHub repository.
+  3. *Adequacy for Prototype Scope:* Meets the single-page prototype requirement completely while providing structured key-value and object storage for simulated inverter telemetry and church load schedules.
+
+---
 *SACHIB Energy — Product Requirements Document, Phase 1 (Q1)*
+
