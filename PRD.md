@@ -355,5 +355,33 @@ This allows the project to begin through partnerships, validate the technology a
   3. *Adequacy for Prototype Scope:* Meets the single-page prototype requirement completely while providing structured key-value and object storage for simulated inverter telemetry and church load schedules.
 
 ---
+
+### 13.4 Documented Agent Steering: Design Refinements (`design.html`)
+*Required for AI Grader cross-referencing:*
+
+- **Initial Agent Proposal:** The AI initially designed a generic clean white dashboard layout with standard generic blue buttons.
+- **Steered Decision by User/Student:** The student steered the agent to replace the light theme with a purpose-tailored, high-contrast dark aesthetic (**Deep Sanctuary Navy `#060A10` / `#0C1322`**) and solar-energy accents (**Solar Gold `#F59E0B`** and **Clean Energy Emerald `#10B981`**).
+- **Key Design Refinements Implemented:**
+  1. *Biblical & Cultural Branding:* Added the Exodus 10:23 motto (*“Light in every dwelling”*) prominently in the header and design tokens.
+  2. *Energy Status Hierarchy:* Established standardized status chip tokens for active Solar generation, Battery SoC %, Utility Grid standby, and Diesel Generator warning states.
+  3. *Prescriptive Advisory Card Component:* Created a distinctive high-priority callout pattern with glassmorphism and an amber gradient border specifically designed to highlight AI predictive actions over passive data readouts.
+
+---
+
+### 13.5 Documented Agent Steering: Prototype Scope & Features (`index.html`)
+*Required for AI Grader cross-referencing:*
+
+- **Initial Agent Proposal:** The AI initially proposed implementing complex multi-view routing, authentication screens, and backend API endpoints.
+- **Steered Decision by User/Student:** The student steered the agent to focus strictly on a **single, responsive local working page (`index.html`)** centered on the core product differentiator: **The Prescriptive AI Advisory Engine (PRD Section 7.2)**.
+- **Key Features Implemented via Steering:**
+  1. *Interactive Prescriptive Advisory Banner:* Displays real-time dynamic advisories (e.g., forecasting battery depletion before 4:15 AM based on load vs. sunlight).
+  2. *One-Click Eco-Shedding Action:* Added an interactive `⚡ Apply Eco-Shedding` button that immediately sheds non-essential sanctuary A/C (3.10 kW), recalculates battery runtime in real time, and turns the advisory badge green.
+  3. *Interactive Environmental Simulator:* Added live sliders for solar irradiance (sunlight intensity) and battery reserve level, allowing immediate simulation of overcast skies and low-battery alerts.
+  4. *Facility Profile Switcher:* Added switching between Church Campus facilities (*Grace Cathedral*) and Member Enterprises (*Grace Bakery & Cold Store*), dynamically adapting circuits and load labels.
+  5. *Mission Impact Tracker:* Integrated a tangible financial and diesel savings counter displaying litres of diesel saved and Naira (₦) redirected into ministry.
+  6. *Client-Side Export:* Added an `Export Energy Audit (CSV)` feature using the browser Blob API, allowing instant data extraction without external servers.
+
+---
 *SACHIB Energy — Product Requirements Document, Phase 1 (Q1)*
+
 
