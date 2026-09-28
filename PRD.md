@@ -335,10 +335,10 @@ This allows the project to begin through partnerships, validate the technology a
 ### 13.2 Local Tooling & Architecture Stack
 *Note: In accordance with the prototype assessment constraints, both the application and database run strictly **locally** using mock/test data.*
 
-- **Frontend Framework:** Vanilla HTML5, Modern CSS3 (Custom Design System tokens, Glassmorphism, CSS Grid/Flexbox), and Vanilla JavaScript (ES6+ Modules).
-- **Local Database:** Browser-native **IndexedDB** paired with **LocalStorage** (running 100% locally on the client without external server dependencies).
-- **Authentication:** Local Session Mock Auth (simulating Church Admin vs. Member role profiles with local storage tokens; zero sensitive credentials committed).
-- **File Storage:** Local Browser Storage (`IndexedDB` Blob store & Local Filesystem for exportable energy audit reports).
+- **Framework:** Vanilla HTML5, Modern CSS3 (Custom Design System tokens, Glassmorphism, CSS Grid/Flexbox), and Vanilla JavaScript (ES6+ Modules).
+- **Database:** Browser-native **IndexedDB** paired with **LocalStorage** (running 100% locally on the client without external server dependencies).
+- **Accounts & Authentication:** Local Session Mock Auth (simulating Church Admin vs. Member role profiles with local storage tokens; zero sensitive credentials committed).
+- **Files & File Storage:** Local Browser Storage (`IndexedDB` Blob store & Local Filesystem for exportable energy audit CSV reports).
 - **Hosting / Environment:** Completely local execution (zero public deployment or external cloud requirement for initial prototype).
 
 ---
